@@ -1,0 +1,32 @@
+# Arquivos temporários do sistema
+/tmp/
+*.tmp
+*.temp
+
+# Handshakes capturados (mantém a pasta, mas ignora os arquivos)
+/handshakes/
+!/handshakes/.gitkeep
+
+# Wordlists geradas (para não poluir o repositório)
+wordlist_*.txt
+rockyou.txt
+
+# Senhas capturadas (se preferir não versionar)
+senhas_capturadas.txt
+
+# Arquivos de backup de editores
+*~
+*.swp
+*.swo
+
+# Arquivos de log
+*.log
+
+# Arquivos de saída do aircrack/hashcat
+*.cap
+*.hccapx
+*.pot
+*.csv
+
+# Diretório de wordlists do usuário (se criado localmente)
+/usr/share/wordlists/wordlist_usuario/
