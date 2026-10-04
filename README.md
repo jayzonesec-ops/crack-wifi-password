@@ -1,76 +1,3 @@
-<<<<<<< HEAD
-# 📡 Brute Force WiFi – Handshake Capture & Password Cracking
-
-   Versão: 1.0
-
-   Autor: JayZoneSec
-
-   Plataforma: Kali Linux / Debian-based
-
-📡 Crack WiFi Password
-
-   Ferramenta automatizada para captura de handshake WPA/WPA2 e quebra de senha WiFi com wordlists, crunch e suporte a GPU (hashcat).
-
-   [!CAUTION]
- 
-   AVISO LEGAL — LEIA ANTES DE USAR**
- 
-   Esta ferramenta é destinada **exclusivamente** a testes de segurança em **redes próprias** ou com **autorização expressa por escrito** do proprietário. O uso não autorizado para acessar redes de terceiros é **CRIME** no Brasil, previsto no **Art. 154-A do Código Penal** (Lei 12.737/2012), com pena de detenção de **3 meses a 2 anos** e multa.
- 
-   O autor **não se responsabiliza** pelo uso indevido desta ferramenta. **Ao executá-la, você assume total responsabilidade por suas ações.**
-
-------------------------------------------------------------------------------------------------------------------------
-
-## 🔍 Visão Geral
-
-   Esta ferramenta automatiza o processo completo de:
-
-✅ Ativação do modo monitor em interfaces wireless.
-
-✅ Varredura de redes Wi-Fi disponíveis (SSID, BSSID, canal, potência, beacons e criptografia).
-
-✅ Seleção de rede alvo e captura do handshake WPA/WPA2.
-
-✅ Ataque de desautenticação (deauth) direcionado a toda a rede ou a um cliente específico.
-
-✅ Quebra de senha com wordlists (rockyou, personalizada, crunch) e ataque via pipe com crunch.
-
-✅ Suporte opcional a GPU via hashcat para aceleração massiva.
-
-✅ Armazenamento automático de senhas descobertas.
-
--------------------------------------------------------------------------------------------------------------------
-
-## ✨ Funcionalidades
-
-   Recurso	Descrição:
-
- 1- Interface interativa
- 
- 2- Menus intuitivos com status atualizado a cada etapa.
- 
- 3- Modo monitor automático, ativa e gerencia interfaces wireless sem complicação.
- 
- 4- Varredura de redes, lista todas as redes com SSID, BSSID, canal, potência, beacons e criptografia.
- 
- 5- Captura de handshake,	usa airodump-ng e aireplay-ng com opção de repetição em caso de falha.
- 
- 6- Deauth contínuo, envia 2 pacotes a cada 3 segundos para forçar reconexão.
- 
- 7- Seleção de cliente,	permite escolher um cliente específico para ataques direcionados.
- 
- 8- Múltiplos métodos de wordlist:	rockyou, wordlist do usuário, geração com crunch, ataque via pipe com crunch.
- 
- 9- Suporte a GPU,	detecta automaticamente disponibilidade de GPU e oferece quebra com hashcat.
-
-10- Salvamento de senhas,	todas as senhas descobertas são salvas em senhas_capturadas.txt.
-
-11- Saída limpa, ao sair (Ctrl+C ou opção 4), restaura a interface, mata processos e limpa a tela.
-
-12- Cabeçalho dinâmico,	cor aleatória a cada atualização e relógio em tempo real.
-
------------------------------------------------------------------------------------------------------------------
-=======
 # 📡 Brute Force WiFi — Handshake Capture & Password Cracking
 
 > Ferramenta automatizada para captura de handshake WPA/WPA2 e quebra de senha WiFi com wordlists, **crunch** e suporte a **GPU (hashcat)**.
@@ -137,50 +64,11 @@ Esta ferramenta automatiza o processo completo de auditoria de redes Wi-Fi:
 | 11 | **Cabeçalho dinâmico** | Cor aleatória a cada atualização e relógio em tempo real |
 
 ---
->>>>>>> 3454e83 (Initial commit)
 
 ## 📦 Dependências
 
 ### Pacotes obrigatórios
 
-<<<<<<< HEAD
-`aircrack-ng` – Captura e quebra de handshake.
-
-`xterm` – Janelas de monitoramento em tempo real.
-
-`crunch` – Geração de wordlists e ataques via pipe.
-
-### Pacotes Opcionais
-
-`hashcat` - Quebra com GPU (aceleração massiva).
-`hashcat-utils` - Utilitários (inclui `cap2ccapx`)
-
-### Instalação no Kali Linux / Debian
-
-   sudo apt update
- 
-   sudo apt install aircrack-ng xterm crunch hashcat hashcat-utils
-
------------------------------------------------------------------------------------------------------------------
-
-## 🚀 Como Usar
-
-### 1. Clone ou baixe o script
-
-   git clone https://github.com/jayzonesec-ops/crack-wifi-password
-
-   cd crack-wifi-password
-
-   chmod +x crack_wifi.sh
-
-
-### 2. Execute com privilégios de root
-
-   sudo ./crack_wifi.sh
-
-
-### 3. Menu principal
-=======
 | Pacote | Função |
 |--------|--------|
 | `aircrack-ng` | Captura e quebra de handshake |
@@ -220,7 +108,6 @@ sudo ./crack_wifi.sh
 ```
 
 ### 3️⃣ Menu principal
->>>>>>> 3454e83 (Initial commit)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e0750495-084b-4373-a8e6-60496a7c3e10" width="800"/>
@@ -228,87 +115,6 @@ sudo ./crack_wifi.sh
   <em>Menu principal da ferramenta</em>
 </p>
 
-<<<<<<< HEAD
----------------------------------------------------------------------------------------------------------------
-
-## 📋 Fluxo de Ataque:
-
-1- Configurar Interface – selecione a interface wireless (ex: wlan0) e ative o modo monitor.
-
-2- Varredura de Redes – escaneie as redes disponíveis e selecione o alvo.
-
-3- Tipo de Ataque – escolha entre ataque à rede inteira ou a um cliente específico.
-
-4- Captura de Handshake – aguarde a captura do handshake (até 60 segundos).
-
-5- Selecionar Wordlist – escolha entre vários métodos de quebra.
-
-6- Quebra de Senha – inicie a quebra e aguarde o resultado.
-
-----------------------------------------------------------------------------------------------------------------
-
-## 🧠 Métodos de Wordlist:
-
-1 – rockyou	Wordlist padrão do Kali Linux.
-
-2 – Wordlist do usuário	Lista wordlists em /usr/share/wordlists/wordlist_usuario/. Permite adicionar novas.
-
-3 – Gerar com crunch	Define tamanho e caracteres; gera arquivo e pergunta se deseja salvar.
-
-4 – Ataque via pipe	Usa crunch em pipe com aircrack-ng – não cria arquivo em disco.
-
-5 – GPU (hashcat)	(se disponível) Quebra acelerada com GPU.
-
----------------------------------------------------------------------------------------------------------------
-
-## ⚙️ Exemplo de Uso
-
-   sudo ./crack_wifi.sh
-
-Selecione a interface wlan0.
-
-Escaneie as redes.
-
-Escolha o alvo (ex: número 3).
-
-Selecione o tipo de ataque (ex: 1 – rede inteira).
-
-Aguarde a captura do handshake.
-
-Escolha a wordlist (ex: 4 – ataque via pipe).
-
-Configure o crunch (ex: min 8, max 10, charset numérico).
-
-Inicie a quebra.
-
-Se encontrada, a senha será exibida e salva.
-
---------------------------------------------------------------------------------------------------------------------------------
-
-## ⚠️ Avisos Legais
-
-   Esta ferramenta destina-se exclusivamente a testes de segurança em redes próprias ou com autorização explícita do proprietário.
-
-   O uso não autorizado para acessar redes de terceiros é ilegal.
-
-   O autor não se responsabiliza por mau uso da ferramenta.
-
-   Ao executar, você assume total responsabilidade por suas ações.
-
-----------------------------------------------------------------------------------------------------------------------------------
-
-## 📄 Licença
-
-   MIT License – Copyright (c) 2026 JayZoneSec
-
-### 👨‍💻 Autor
-
-   JayZoneSec
-
-GitHub: @jayzonesec-ops
-
-Projeto: crack-wifi-password
-=======
 ---
 
 ## 📋 Fluxo de Ataque
@@ -408,4 +214,3 @@ Veja o arquivo `LICENSE` para mais detalhes.
 <p align="center">
   <sub>Feito com ❤️ por <a href="https://github.com/jayzonesec-ops">JayZoneSec</a></sub>
 </p>
->>>>>>> 3454e83 (Initial commit)
