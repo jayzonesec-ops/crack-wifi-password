@@ -212,5 +212,5 @@ Veja o arquivo `LICENSE` para mais detalhes.
 - 📦 Projeto: [crack-wifi-password](https://github.com/jayzonesec-ops/crack-wifi-password)
 
 <p align="center">
-  <sub>Feito com ❤️ por <a href="https://github.com/jayzonesec-ops">JayZoneSec</a></sub>
+  <sub>💻 Built by <a href="https://github.com/jayzonesec-ops">JayZoneSec</a> — Ethical Hacking & Tools 🔐</sub>
 </p>
